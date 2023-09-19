@@ -60,6 +60,7 @@ const Login = () => {
           label=" Email"
           id="fullWidth"
           type="email"
+          required
           variant="outlined"
           // size="small"
           onChange={(e) => setEmail(e.target.value)}
@@ -69,6 +70,7 @@ const Login = () => {
     <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
         <OutlinedInput
           fullWidth
+          required
           label=" Password"
           id="outlined-adornment-password"
           type={showPassword ? "text" : "password"}
