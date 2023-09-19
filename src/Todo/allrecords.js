@@ -7,15 +7,15 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import { useTheme } from "@mui/material/styles";
+// import useMediaQuery from "@mui/material/useMediaQuery";
+// import { useTheme } from "@mui/material/styles";
 import * as React from "react";
 
 const NewBlog = () => {
   const [open, setOpen] = React.useState(false);
   const [deleteId, setDeleteId] = React.useState(null);
-  const theme = useTheme();
-  const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
+//   const theme = useTheme();
+//   const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
   const [records, setRecords] = useState([]);
 
   const handleClickOpen = (id) => {

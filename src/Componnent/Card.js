@@ -1,25 +1,31 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
+// import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
+// import Paper from '@mui/material/Paper';
 import { Stack, Typography } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import stock from "../Images/stock.jpeg"
 import man from "../Images/man.jpg"
 import Link from '@mui/material/Link';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 
 
-const preventDefault = (event) => event.preventDefault();
-const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  }));
+// const Item = styled(Paper)(({ theme }) => ({
+//     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+//     ...theme.typography.body2,
+//     padding: theme.spacing(1),
+//     textAlign: 'center',
+//     color: theme.palette.text.secondary,
+//   }));
 const  Grid = ({searchValue}) => {
-  const list=[{img:stock, game:"Games", navi:"Nvidia Release New Way Of Producing NFTs", des:"Craving something tangy, sticky, and a bit sweet? These Korean style pork chops are your answer. They’re ready in under 40 minutes, including marinating time, and they’re incredibly satisfying"}]
+  const list = useMemo(() => [
+    {
+      img: stock,
+      game: 'Games',
+      navi: 'Nvidia Release New Way Of Producing NFTs',
+      des: 'Craving something tangy, sticky, and a bit sweet? These Korean style pork chops are your answer. They’re ready in under 40 minutes, including marinating time, and they’re incredibly satisfying',
+    },
+  ], []);
   const [filteredItems, setFilteredItems] = useState([]);
   
   useEffect(() => {
@@ -39,7 +45,7 @@ const  Grid = ({searchValue}) => {
     });
   
     setFilteredItems(filtered);
-  }, [searchValue]);
+  }, [list, searchValue]);
   
   return ( 
 
@@ -150,7 +156,7 @@ const  Grid = ({searchValue}) => {
       }}
     >
       <Link href="/singlepage">
-        <img src={List.img} width="100%" />
+        <img src={List.img} alt="net" width="100%" />
       </Link>
     </Box>
     
@@ -219,7 +225,7 @@ const  Grid = ({searchValue}) => {
      }}
    >
      <Link href="/singlepage">
-       <img src={List.img} width="100%" />
+       <img src={List.img} alt="net" width="100%" />
      </Link>
    </Box>
    
