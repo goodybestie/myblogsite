@@ -20,7 +20,7 @@ function App() {
    <Route path='/home' element={<Blog />}/>
    <Route path='/' element={<Signup />}/>
    <Route path='/createnewblog/:id' element={<BlogPage />}/>
-   <Route path='/Login' element={<Login />}/>
+   <Route path='/login' element={<Login />}/>
    <Route path='/allrecords' element={<NewBlog />}/>
 
    
