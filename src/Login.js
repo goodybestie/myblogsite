@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Box, Typography } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import IconButton from "@mui/material/IconButton";
-// import OutlinedInput from "@mui/material/OutlinedInput";
-// import InputLabel from "@mui/material/InputLabel";
+import OutlinedInput from "@mui/material/OutlinedInput";
+import InputLabel from "@mui/material/InputLabel";
 import InputAdornment from "@mui/material/InputAdornment";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
@@ -61,19 +61,19 @@ const Login = () => {
           id="fullWidth"
           type="email"
           variant="outlined"
-          size="small"
+          // size="small"
           onChange={(e) => setEmail(e.target.value)}
           sx={{ width: { md: "40%", xs: "%" }, mb:"20px" }}
         />
-      <FormControl  variant="outlined">
-    {/* <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel> */}
-        <TextField
+      <FormControl  variant="outlined" >
+    <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
+        <OutlinedInput
           fullWidth
           label=" Password"
-          // id="outlined-adornment-password"
+          id="outlined-adornment-password"
           type={showPassword ? "text" : "password"}
-          variant="outlined"
-          size="small"
+          // variant="outlined"
+          // size="small"
           onChange={(e) => setPassword(e.target.value)}
           endAdornment={
             <InputAdornment position="end">

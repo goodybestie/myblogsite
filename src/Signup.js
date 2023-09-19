@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import { Box, Typography, Link } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import IconButton from "@mui/material/IconButton";
-// import OutlinedInput from "@mui/material/OutlinedInput";
+import OutlinedInput from "@mui/material/OutlinedInput";
 import InputAdornment from "@mui/material/InputAdornment";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import Button from "@mui/material/Button";
 import { useProvider } from "./Context/Auth";
 import { useNavigate } from "react-router-dom";
+import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 
 const Signup = () => {
@@ -58,20 +59,20 @@ const Signup = () => {
           id="fullWidth"
           type="email"
           variant="outlined"
-          size="small"
+          // size="small"
           onChange={(e) => setEmail(e.target.value)}
           sx={{ width: { md: "40%", xs: "%" }, mb:"20px" }}
         />
         {error && <Typography color="error" sx={{ mt:"-12px", mb:"10px"}}>{error}</Typography>}
         <FormControl  variant="outlined">
-    {/* <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel> */}
-        <TextField
+    <InputLabel >Password</InputLabel>
+        <OutlinedInput
           fullWidth
           label=" Password"
-          // id="outlined-adornment-password"
+          id="outlined-adornment-password"
           type={showPassword ? "text" : "password"}
           variant="outlined"
-          size="small"
+          // size="small"
           onChange={(e) => setPassword(e.target.value)}
           endAdornment={
             <InputAdornment position="end">
@@ -94,7 +95,10 @@ const Signup = () => {
         <Button variant="contained" type="submit" sx={{ ml: {md:"47%", xs:"39%"}, mt: "40px" }}>
           {loading ? "Signing Up..." : "Sign Up"}
         </Button>
-       <Link href="/login"> <Typography sx={{textAlign:"center", mt:"12px"}} >Already have an Account Login</Typography></Link>
+       <Link href="/Login">
+         <Typography sx={{textAlign:"center", mt:"12px"}} >
+          Already have an Account Login</Typography>
+         </Link>
       </Box>
     </Box>
   );
