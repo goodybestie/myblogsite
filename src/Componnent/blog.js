@@ -15,7 +15,7 @@ const BlogPage = ({ records }) => {
   const { id } = useParams()
 
   const list = [{ title: "Blog Title", des: "Blog Description", language: "Blog Language" }]
-  const [error, setError] = useState("Ooops! Network Error..")
+  // const [error, setError] = useState("Ooops! Network Error..")
   const [isUpdateMode, setIsUpdateMode] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [networkErrorMessage, setNetworkErrorMessage] = useState(null);

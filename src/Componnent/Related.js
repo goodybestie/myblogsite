@@ -1,24 +1,24 @@
 import { Box, Typography } from "@mui/material";
 import stock from "../Images/stock.jpeg"
-import { CardActionArea } from '@mui/material';
+// import { CardActionArea } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import man from "../Images/man.jpg"
 import { Stack} from '@mui/material';
-import { experimentalStyled as styled } from '@mui/material/styles';
-import Paper from '@mui/material/Paper';
+// import { experimentalStyled as styled } from '@mui/material/styles';
+// import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Card from "../Componnent/Card"
 
 
 const Related = () => {
 const item = [{img:stock, game:"Games", navi:"Nvidia Release New Way Of Producing NFTs", des:"Craving something tangy, sticky, and a bit sweet? These Korean style pork chops are your answer. They’re ready in under 40 minutes, including marinating time, and they’re incredibly satisfying"}]
-const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-    ...theme.typography.body2,
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  }));
+// const Item = styled(Paper)(({ theme }) => ({
+//     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+//     ...theme.typography.body2,
+//     padding: theme.spacing(2),
+//     textAlign: 'center',
+//     color: theme.palette.text.secondary,
+//   }));
     return ( 
         <Box>
         <Box sx={{mt:"50px"}}>
@@ -31,7 +31,7 @@ const Item = styled(Paper)(({ theme }) => ({
            
             {item.map((Item) => (
         <Typography key={Item} >
-            <img src={Item.img} style={{ maxWidth: '90%', height: 'auto',  borderRadius: "10px", overflow: "hidden", textAlign:"justify" }} />
+            <img src={Item.img} alt="net" style={{ maxWidth: '90%', height: 'auto',  borderRadius: "10px", overflow: "hidden", textAlign:"justify" }} />
                 <Typography sx={{color:"blue", mb:"20px", fontWeight:"bold"}}>{Item.game}</Typography>
                 <Typography sx={{color:"black", mb:"20px", fontWeight:"bold", fontSize:"20px", cursor:"pointer"}}>{Item.navi}</Typography>
                 <Typography sx={{color:"black", mb:"20px", textAlign:"justify", mr:"30px"}}>{Item.des}</Typography>

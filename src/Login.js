@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Box, Typography } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import IconButton from "@mui/material/IconButton";
-import OutlinedInput from "@mui/material/OutlinedInput";
-import InputLabel from "@mui/material/InputLabel";
+// import OutlinedInput from "@mui/material/OutlinedInput";
+// import InputLabel from "@mui/material/InputLabel";
 import InputAdornment from "@mui/material/InputAdornment";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
@@ -49,7 +49,7 @@ const Login = () => {
     <Box sx={{ marginTop: { md: "8%", xs: "40%" } }}>
       <Box component="form" onSubmit={handleSubmit} sx={{ px: "20px" }}>
         <Typography
-          sx={{ textAlign: "center", color: "#071952", mb: "30px", fontSize: "20px", color:"#071952" }}
+          sx={{ textAlign: "center", mb: "30px", fontSize: "20px", color:"#071952" }}
         >
           Login
         </Typography>

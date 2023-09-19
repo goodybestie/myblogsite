@@ -117,7 +117,7 @@ function ResponsiveAppBar() {
               color: 'inherit',
               textDecoration: 'none',
               // border:"solid blue",
-              color:"#fff"
+              // color:"#fff"
             }}
           >
             CohortBlog

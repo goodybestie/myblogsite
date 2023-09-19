@@ -10,7 +10,7 @@ const Article = () => {
             {
                 data.map((data => (
                     <Typography key={data} sx={{textAlign:"center"}}>
-                        <img src={data.img} style={{  borderRadius:"30px", height:"22rem", width:"60%" }} 
+                        <img src={data.img} alt="net" style={{  borderRadius:"30px", height:"22rem", width:"60%" }} 
                         
                         />
                         <Typography sx={{width:{md:"50%", xs:"80%"},  textAlign:"left",  marginLeft:{md:"25%", xs:"15%"} }}>{data.des} </Typography>

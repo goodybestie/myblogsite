@@ -1,4 +1,4 @@
-import { Stack, Typography } from '@mui/material';
+import { Stack } from '@mui/material';
 import Navbar from "../Componnent/Navbar"
 import Second from './second'; 
 import Article from './article';
