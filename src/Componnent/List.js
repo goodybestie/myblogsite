@@ -10,7 +10,7 @@ const List = () => {
             <Box>
                 {
                     list.map((list => (
-                        <Typography key={list} sx={{display:{md:"flex", xs:"none"}, justifyContent:"center", gap:"24px", mt:"34px", border:{xs:"solid red"}}}>
+                        <Typography key={list} sx={{display:{md:"flex", xs:"none"}, justifyContent:"center", gap:"24px", mt:"34px"}}>
                             <Button variant="contained" size="small" sx={{backgroundColor:"blue", fontSize:"10px",borderRadius:"10px", padding:"0px 10px"}}>{list.All}
                                 </Button>
                             <Typography>{list.Home}</Typography>
