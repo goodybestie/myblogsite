@@ -38,7 +38,7 @@ const Signup = () => {
 
     try {
       await Signup(item);
-      navigate("/login");
+      navigate("/Login");
     } catch (error) {
       // Error message is now in the `error` state
     }
