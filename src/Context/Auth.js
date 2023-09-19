@@ -27,7 +27,7 @@ const AuthContext = ({ children }) => {
 
       return response.data;
     } catch (error) {
-      setError("Email already exists" && "network error");
+      setError("Email already exists");
       throw error;
     } finally {
       setLoading(false);
@@ -46,7 +46,7 @@ const AuthContext = ({ children }) => {
 
       return response.data;
     } catch (error) {
-      setError("Incorrect email or password" && "network error");
+      setError("Incorrect email or password" );
       throw error;
     } finally {
       setLoading(false);
