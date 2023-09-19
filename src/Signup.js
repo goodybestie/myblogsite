@@ -95,7 +95,7 @@ const Signup = () => {
         <Button variant="contained" type="submit" sx={{ ml: {md:"47%", xs:"39%"}, mt: "40px" }}>
           {loading ? "Signing Up..." : "Sign Up"}
         </Button>
-       <Link href='/login'>
+       <Link href='/Login'>
          <Typography sx={{textAlign:"center", mt:"12px"}} >
           Already have an Account Login</Typography>
          </Link>
