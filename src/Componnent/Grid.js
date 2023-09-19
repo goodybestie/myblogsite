@@ -1,12 +1,12 @@
 
 
 import * as React from 'react';
-import { CardActionArea } from '@mui/material';
+// import { CardActionArea } from '@mui/material';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import { Stack, Typography } from '@mui/material';
-import { experimentalStyled as styled } from '@mui/material/styles';
-import Paper from '@mui/material/Paper';
+// import { experimentalStyled as styled } from '@mui/material/styles';
+// import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import { useState, useEffect } from 'react';
@@ -18,13 +18,13 @@ const initialItems = [
   { img: stock, game: "Games", navi: "Nvidia Release New Way Of Producing NFTs", des: "Craving something tangy, sticky, and a bit sweet? These Korean style pork chops are your answer. They’re ready in under 40 minutes, including marinating time, and they’re incredibly satisfying" }
 ];
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(2),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
+// const Item = styled(Paper)(({ theme }) => ({
+//   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+//   ...theme.typography.body2,
+//   padding: theme.spacing(2),
+//   textAlign: 'center',
+//   color: theme.palette.text.secondary,
+// }));
 
 export default function ResponsiveGrid({ searchValue }) {
   const [filteredItems, setFilteredItems] = useState([]);
@@ -60,7 +60,7 @@ export default function ResponsiveGrid({ searchValue }) {
                   <Grid item xs={2} sm={4} md={4} key={index}>
                 <Box key={index}>
                   <Link href="/singlepage">
-                    <img src={item.img} style={{ maxWidth: '90%', height: 'auto', borderRadius: "10px", overflow: {md:"hidden", xs:"hidden"}, textAlign: "justify" }} />
+                    <img src={item.img} alt="net" style={{ maxWidth: '90%', height: 'auto', borderRadius: "10px", overflow: {md:"hidden", xs:"hidden"}, textAlign: "justify" }} />
                   </Link>
                   <Typography sx={{ color: "blue", mb: "20px", fontWeight: "bold" }}>{item.game}</Typography>
                   <Typography sx={{ color: "black", mb: "20px", fontWeight: "bold", fontSize: "20px", cursor: "pointer" }}>{item.navi}</Typography>
@@ -87,7 +87,7 @@ export default function ResponsiveGrid({ searchValue }) {
                   {initialItems.map((item, index) => (
                     <Box key={index}>
                       <Link href="/singlepage">
-                        <img src={item.img} style={{ maxWidth: '90%', height: 'auto', borderRadius: "10px", overflow: {md:"hidden", xs:"hidden"}, textAlign: "justify" }} />
+                        <img src={item.img} alt="net" style={{ maxWidth: '90%', height: 'auto', borderRadius: "10px", overflow: {md:"hidden", xs:"hidden"}, textAlign: "justify" }} />
                       </Link>
                       <Typography sx={{ color: "blue", mb: "20px", fontWeight: "bold" }}>{item.game}</Typography>
                       <Typography sx={{ color: "black", mb: "20px", fontWeight: "bold", fontSize: "20px", cursor: "pointer" }}>{item.navi}</Typography>
