@@ -6,11 +6,11 @@ import setToken from "../Config";
 const mycontext = createContext({});
 const AuthContext = ({ children }) => {
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null); // Define error state
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    const storedToken = JSON.parse(localStorage.getItem("token" || "{}"));
-    if (storedToken) {
+    const storedToken = JSON.parse(localStorage.getItem("token")) || {};
+    if (storedToken?.token) {
       setToken(storedToken?.token);
     }
   }, []);
@@ -18,7 +18,7 @@ const AuthContext = ({ children }) => {
   const Signup = async (item) => {
     try {
       setLoading(true);
-      setError(null); // Reset error on each action
+      setError(null);
 
       const response = await axios.post("/auth/signup", item);
 
@@ -27,7 +27,11 @@ const AuthContext = ({ children }) => {
 
       return response.data;
     } catch (error) {
-      setError("Email already exists");
+      if (error.response && error.response.status === 400) {
+        setError("Email already exists");
+      } else {
+        setError("Network error");
+      }
       throw error;
     } finally {
       setLoading(false);
@@ -37,7 +41,7 @@ const AuthContext = ({ children }) => {
   const Login = async (Item) => {
     try {
       setLoading(true);
-      setError(null); // Reset error on each action
+      setError(null);
 
       const response = await axios.post("/auth/login", Item);
 
@@ -46,7 +50,11 @@ const AuthContext = ({ children }) => {
 
       return response.data;
     } catch (error) {
-      setError("Incorrect email or password" );
+      if (error.response && error.response.status === 400) {
+        setError("Incorrect email or password");
+      } else {
+        setError("Network error");
+      }
       throw error;
     } finally {
       setLoading(false);
