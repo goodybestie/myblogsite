@@ -18,7 +18,7 @@ function App() {
         
    <Route path='/SinglePage' element={<SinglePage/>}/>
    <Route path='/home' element={<Blog />}/>
-   <Route path='/' element={<Signup />}/>
+   <Route exact path='/' element={<Signup />}/>
    <Route path='/createnewblog/:id' element={<BlogPage />}/>
    <Route path='/Login' element={<Login />}/>
    <Route path='/allrecords' element={<NewBlog />}/>

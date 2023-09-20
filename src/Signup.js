@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Typography, Link } from "@mui/material";
+import { Box, Typography} from "@mui/material";
 import TextField from "@mui/material/TextField";
 import IconButton from "@mui/material/IconButton";
 import OutlinedInput from "@mui/material/OutlinedInput";
@@ -11,6 +11,7 @@ import { useProvider } from "./Context/Auth";
 import { useNavigate } from "react-router-dom";
 import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
+import {Link} from "react-router-dom"
 
 const Signup = () => {
   const { Signup, loading, error, setError } = useProvider();
@@ -97,10 +98,11 @@ const Signup = () => {
         <Button variant="contained" type="submit" sx={{ ml: {md:"47%", xs:"39%"}, mt: "40px" }}>
           {loading ? "Signing Up..." : "Sign Up"}
         </Button>
-       <Link href='/Login'>
+       <Link to="/Login">
          <Typography sx={{textAlign:"center", mt:"12px"}} >
           Already have an Account Login</Typography>
-         </Link>
+          </Link>
+        
       </Box>
     </Box>
   );

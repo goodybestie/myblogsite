@@ -10,7 +10,8 @@ import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import Button from "@mui/material/Button";
 import { useProvider } from "./Context/Auth";
 import { useNavigate } from "react-router-dom";
-import Link from "@mui/material/Link"
+import {Link} from "react-router-dom"
+
 import FormControl from '@mui/material/FormControl';
 
 const Login = () => {
@@ -99,8 +100,7 @@ const Login = () => {
         <Button variant="contained" type="submit" sx={{ ml: {md:"47%", xs:"39%"}, mt: "40px"  }}>
           {loading ? "Logging In..." : "Login"}
         </Button>
-        <Link href="/"><Typography sx={{textAlign:"center", mt:"12px"}}>Go back and SignUp</Typography></Link>
-        
+        <Link to="/"><Typography sx={{textAlign:"center", mt:"12px"}}>Go back and SignUp</Typography></Link>
       </Box>
       
     </Box>

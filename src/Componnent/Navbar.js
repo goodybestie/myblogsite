@@ -10,7 +10,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import Link from '@mui/material/Link';
+import {Link} from 'react-router-dom';
 
 
 const pages = [{home:'Home', new:'Create A Blog', all:"AllRecord" }];
@@ -92,10 +92,10 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center" >
-                  <Link  href="/home" sx={{textDecoration:"none"}}>    <Typography>{page.home} </Typography> </Link>
-                  <Link  href="/createnewblog/:id" sx={{textDecoration:"none"}}>   <Typography>{page.new} </Typography> </Link>
-                  <Link  href="/allrecords" sx={{textDecoration:"none"}}>   <Typography>{page.all} </Typography> </Link>
+                  <Typography textAlign="center">
+                  <Link to="/home" style={{textDecoration:"none"}}>    <Typography>{page.home} </Typography> </Link>
+                  <Link to="/createnewblog/:id" style={{textDecoration:"none"}}>   <Typography>{page.new} </Typography> </Link>
+                  <Link  to="/allrecords" style={{textDecoration:"none"}}>   <Typography>{page.all} </Typography> </Link>
                     </Typography>
                 </MenuItem>
               ))}
@@ -129,9 +129,9 @@ function ResponsiveAppBar() {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: '#fff', display: 'flex', gap:"20px" , textDecoration:"none"}}
               >
-              <Link  href="/home" sx={{textDecoration:"none"}}>   <Typography>{page.home} </Typography> </Link>
-             <Link  href="/createnewblog/:id" sx={{textDecoration:"none"}}>   <Typography >{page.new} </Typography> </Link>
-             <Link  href="/allrecords" sx={{textDecoration:"none"}}> <Typography>{page.all} </Typography></Link>
+              <Link  to="/home" style={{textDecoration:"none"}}>   <Typography>{page.home} </Typography> </Link>
+             <Link  to="/createnewblog/:id" style={{textDecoration:"none"}}>   <Typography >{page.new} </Typography> </Link>
+             <Link  to="/allrecords" style={{textDecoration:"none"}}> <Typography>{page.all} </Typography></Link>
               </Button>
             ))}
           </Box>

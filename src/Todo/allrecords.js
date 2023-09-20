@@ -1,4 +1,6 @@
-import { Typography, Box, Stack, Button, Link, Card } from "@mui/material";
+import { Typography, Box, Stack, Button,  Card } from "@mui/material";
+import { Link } from 'react-router-dom';
+
 import axios from "axios";
 import Navbar from "../Componnent/Navbar";
 import { useEffect, useState } from "react";
@@ -74,7 +76,7 @@ const NewBlog = () => {
           <Typography sx={{ fontSize: "30px", color: "#fff" }}>
             Blog List
           </Typography>
-          <Link href="/createnewblog/:id">
+          <Link to="/createnewblog/:id">
             <Button variant="contained" sx={{ mt: "10px" }}>
               Create New Blog
             </Button>
@@ -87,7 +89,7 @@ const NewBlog = () => {
                 <Typography>{items.title}</Typography>
                 <Typography>{items.description}</Typography>
                 <Typography>{items.language}</Typography>
-                <Link href={`/createnewblog/${items.id}`}>
+                <Link to={`/createnewblog/${items.id}`}>
                   <Button>EDIT</Button>
                 </Link>
 
