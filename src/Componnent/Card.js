@@ -6,7 +6,7 @@ import { Stack, Typography } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import stock from "../Images/stock.jpeg"
 import man from "../Images/man.jpg"
-import Link from '@mui/material/Link';
+import Link from 'react-dom';
 import { useState, useEffect, useMemo } from 'react';
 
 
@@ -155,7 +155,7 @@ const  Grid = ({searchValue}) => {
         },
       }}
     >
-      <Link href="/singlepage">
+      <Link to="/singlepage">
         <img src={List.img} alt="net" width="100%" />
       </Link>
     </Box>
