@@ -8,7 +8,7 @@ import { Stack, Typography } from '@mui/material';
 // import { experimentalStyled as styled } from '@mui/material/styles';
 // import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import Link from 'react-dom';
+import {Link} from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 import stock from "../Images/stock.jpeg"
@@ -59,7 +59,7 @@ export default function ResponsiveGrid({ searchValue }) {
                 {Array.from(Array(6)).map((_, index) => (
                   <Grid item xs={2} sm={4} md={4} key={index}>
                 <Box key={index}>
-                  <Link href="/singlepage">
+                  <Link to="/singlepage">
                     <img src={item.img} alt="net" style={{ maxWidth: '90%', height: 'auto', borderRadius: "10px", overflow: {md:"hidden", xs:"hidden"}, textAlign: "justify" }} />
                   </Link>
                   <Typography sx={{ color: "blue", mb: "20px", fontWeight: "bold" }}>{item.game}</Typography>
